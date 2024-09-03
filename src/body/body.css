@@ -4,28 +4,35 @@
     align-items: flex-start;
 }
 .InputCom {
-    border: 1.5px solid red;
+    border: 1.5px solid gray ;
+    border-radius: 10px;
+    gap:5px;
+    margin-top: 5px;
 }
 .listArea {
-    border: 1.5px solid red;
+    border: 1.5px solid gray ;
+    border-radius: 10px;
+    gap:5px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 .inputel {
-    border : 1.5px solid blue;
+    /* border : 1.5px solid blue; */
 }
 .selectel {
-    border : 2px solid skyblue;
+    /* border : 2px solid skyblue; */
 }
 .savebtn {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 .list {
-    border: 2px solid lawngreen;
+    /* border: 2px solid lawngreen; */
 }
 .postlist {
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
 }
 .searchcom {
-    border: 2px solid palevioletred;
+    /* border: 2px solid palevioletred; */
 }
 
 @media (max-width: 768px){

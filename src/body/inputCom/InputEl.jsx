@@ -1,9 +1,14 @@
 import "../../body/body.css";
 
-export default function InputEl () {
+export default function InputEl ({placeholder}) {
     return (
         <div className="inputel">
-            정보 받는 inputEl입니다
+            <input
+                type="text"
+                placeholder={placeholder}
+                className="input-fhiled"
+            >
+            </input>
         </div>
     );
 };

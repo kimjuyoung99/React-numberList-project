@@ -3,15 +3,15 @@ import InputEl from "./InputEl";
 import SaveBtn from "./SaveBtn";
 import SelectEl from "./selectEl";
 
-export default function InputCom ({setList}) {
+export default function InputCom ({setList, lists}) {
     return (
         <div className="InputCom">
             InputCom 공간
             <div className="inputEl">
-            <InputEl />
-            <InputEl />
+            <InputEl placeholder="이름" />
+            <InputEl placeholder="전화번호" />
+            <InputEl placeholder="간단한 기록" />
             <SelectEl />
-            <InputEl />
             </div>
             <SaveBtn />
         </div>
