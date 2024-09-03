@@ -1,0 +1,39 @@
+.phone-book-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.InputCom {
+    border: 1.5px solid red;
+}
+.listArea {
+    border: 1.5px solid red;
+}
+.inputel {
+    border : 1.5px solid blue;
+}
+.selectel {
+    border : 2px solid skyblue;
+}
+.savebtn {
+    border: 2px solid yellow;
+}
+.list {
+    border: 2px solid lawngreen;
+}
+.postlist {
+    border: 2px solid orange;
+}
+.searchcom {
+    border: 2px solid palevioletred;
+}
+
+@media (max-width: 768px){
+    .phone-book-container {
+        flex-direction: column;
+    }
+    .InputCom, .listArea {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
