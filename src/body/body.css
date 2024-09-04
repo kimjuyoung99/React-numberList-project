@@ -74,6 +74,14 @@
     margin-top: 18px;
     width: 300px;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
 /* 버튼 모음 */
 .savebtn button{
     background-color: rgb(0, 123, 255);

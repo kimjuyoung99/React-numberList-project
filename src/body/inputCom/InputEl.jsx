@@ -1,7 +1,7 @@
 import "../../body/body.css";
 import React from "react";
 
-export default function InputEl ({label,placeholder,value,onChange}) {
+export default function InputEl ({label,placeholder,value,onChange,error}) {
 
     return (
         <div className="inputel">
@@ -12,8 +12,8 @@ export default function InputEl ({label,placeholder,value,onChange}) {
                 className="input-fhiled"
                 value={value}
                 onChange={onChange}
-            >
-            </input>
+            />
+            {error && <p className="error-message">{error}</p>}
         </div>
     );
 };
