@@ -1,6 +1,7 @@
 import "../../body/body.css";
+import React from "react";
 
-export default function InputEl ({label,placeholder}) {
+export default function InputEl ({label,placeholder,value,onChange}) {
 
     return (
         <div className="inputel">
@@ -9,6 +10,8 @@ export default function InputEl ({label,placeholder}) {
                 type="text"
                 placeholder={placeholder}
                 className="input-fhiled"
+                value={value}
+                onChange={onChange}
             >
             </input>
         </div>

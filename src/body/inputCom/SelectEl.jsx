@@ -1,7 +1,7 @@
 import "../../body/body.css";
 import { useState } from "react";
 
-export default function SelectEl ({label}) {
+export default function SelectEl ({label, value, onChange}) {
     const [showAddGroup, setShowAddGroup] = useState(false);
     const [newGroup, setNewGroup] = useState('');
 
@@ -19,7 +19,7 @@ export default function SelectEl ({label}) {
     return (
         <div className="selectel">
             <label className="input-label">{label}</label>
-            <select className="group-select">
+            <select className="group-select" value={value} onChange={onChange}>
                 <option value="">그룹 선택</option>
                 <option value="가족">가족</option>
                 <option value="직장">직장</option>

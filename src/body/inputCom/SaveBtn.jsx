@@ -1,13 +1,11 @@
 import "../../body/body.css";
 
-export default function SaveBtn () {
-    const saveNumber = ()=> {
+export default function SaveBtn ({onClick}) {
 
-    };
 
     return (
         <div className="savebtn">
-            <button onClick={saveNumber}>저장</button>
+            <button onClick={onClick}>저장</button>
         </div>
     );
 };
