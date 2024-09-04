@@ -1,7 +1,7 @@
 import "../../body/body.css";
 import { useState } from "react";
 
-export default function SelectEl () {
+export default function SelectEl ({label}) {
     const [showAddGroup, setShowAddGroup] = useState(false);
     const [newGroup, setNewGroup] = useState('');
 
@@ -18,6 +18,7 @@ export default function SelectEl () {
 
     return (
         <div className="selectel">
+            <label className="input-label">{label}</label>
             <select className="group-select">
                 <option value="">그룹 선택</option>
                 <option value="가족">가족</option>
@@ -27,7 +28,7 @@ export default function SelectEl () {
             </select>
             <button onClick={handleAddGroup} className="add-group-btn">조직 추가</button>
 
-            {showAddGroup && (
+            {/* {showAddGroup && (
                 <div className="add-group-form">
                     <input 
                     type="text"
@@ -36,8 +37,8 @@ export default function SelectEl () {
                     placeholder="새 그룹 이름"
                     />
                     <button onClick={handleSaveNewGroup}>저장</button>
-                    </div>
-            )}
+                </div>
+            )} */}
         </div>
     );
 };

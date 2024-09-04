@@ -1,5 +1,6 @@
 import "../../body/body.css";
 import { useState } from "react";
+import SearchCom from "./SearchCom";
 
 export default function PostList ({setList, lists}) {
     const [inputText, setInputText] = useState("");
@@ -27,6 +28,7 @@ export default function PostList ({setList, lists}) {
             onKeyUp={handleKeyUp}
             >  
             </input>
+            <SearchCom />
         </div>
     );
 };

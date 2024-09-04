@@ -6,12 +6,11 @@ import SelectEl from "./selectEl";
 export default function InputCom ({setList, lists}) {
     return (
         <div className="InputCom">
-            InputCom 공간
             <div className="inputEl">
-            <InputEl placeholder="이름" />
-            <InputEl placeholder="전화번호" />
-            <InputEl placeholder="간단한 기록" />
-            <SelectEl />
+            <InputEl label="이름" placeholder="이름" />
+            <InputEl label="전화번호" placeholder="전화번호" />
+            <InputEl label="간단한 기록" placeholder="간단한 기록" />
+            <SelectEl label="그룹"/>
             </div>
             <SaveBtn />
         </div>

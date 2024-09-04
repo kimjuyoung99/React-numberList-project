@@ -1,8 +1,10 @@
 import "../../body/body.css";
 
-export default function InputEl ({placeholder}) {
+export default function InputEl ({label,placeholder}) {
+
     return (
         <div className="inputel">
+            <label className="input-label">{label}</label>
             <input
                 type="text"
                 placeholder={placeholder}

@@ -5,10 +5,11 @@ import Body from './body/Body'
 
 function App() {
   const data = [
-    { name : '강혜린', phone: '010-1111-2222', group:'가족'},
-    { name : '전정국', phone: '010-3333-4444', group:'직장'},
+    { name: '박은규', phone: '010-6666-8888', group: '가족' },
+    { name: '김영희', phone: '010-4444-5555', group: '직장' },
     { name: '박민수', phone: '010-2222-2222', group: '직장' },
     { name: '손심이', phone: '010-1111-1111', group: '친구' },
+    { name: '홍길동', phone: '010-0000-0000', group: '친구' },
   ];
   // const data = JSON.parse(localStorage.getItem('numberLists')) || [];
   const [lists, setList] = useState(data);

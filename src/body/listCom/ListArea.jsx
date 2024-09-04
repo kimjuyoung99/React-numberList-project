@@ -6,9 +6,7 @@ import SearchCom from "./SearchCom";
 export default function ListArea ({lists}) {
     return (
         <div className="listArea">
-            ListArea 공간입니다.
             <PostList />
-            <SearchCom />
             <List lists={lists} />
         </div>
     );
