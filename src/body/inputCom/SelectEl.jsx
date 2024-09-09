@@ -1,19 +1,24 @@
 import "../../body/body.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import GroupModal from "../../groupModal/GroupModal";
 
 export default function SelectEl ({label, value, onChange}) {
-    const [showAddGroup, setShowAddGroup] = useState(false);
-    const [newGroup, setNewGroup] = useState('');
+    //모달 표시 여부와 그룹 목록 상태 초기화'
+    const [showModal, setShowModal] = useState(false);
+    const [groups, setGroups] = useState(['가족','직장','친구','스터디']);
 
-    const handleAddGroup =()=>{
-        setShowAddGroup(true);
-    }
+    useEffect (()=> {
+        const savedGroups = localStorage.getItem('groups');
+        if(savedGroups) {
+            setGroups(JSON.parse(savedGroups));
+        }
+    },[]);
 
-    const handleSaveNewGroup =()=>{
-        //새 그룹 저장하는 로직 추가
-        console.log("새로운 그룹 추가 : ", newGroup);
-        setShowAddGroup(false);
-        setNewGroup('');
+    // 새 그룹 추가 시 호출되는 함수
+    const handleAddGroup =(updatedGrouops)=>{
+        setGroups(updatedGrouops);
+        //새로 추가된 그룹을 현재 선택된 값으로 설정
+        onChange({target: {value: updatedGrouops[updatedGrouops.length -1]}});
     }
 
     return (
@@ -21,24 +26,19 @@ export default function SelectEl ({label, value, onChange}) {
             <label className="input-label">{label}</label>
             <select className="group-select" value={value} onChange={onChange}>
                 <option value="">그룹 선택</option>
-                <option value="가족">가족</option>
-                <option value="직장">직장</option>
-                <option value="친구">친구</option>
-                <option value="스터디">스터디</option>
+                {groups.map((group, index)=> (
+                    <option key={index} value={group}>{group}</option>
+                ))}
             </select>
-            <button onClick={handleAddGroup} className="add-group-btn">조직 추가</button>
+            {/* 그룹 추가 버튼 */}
+            <button onClick={()=> setShowModal(true)} className="add-group-btn">조직 추가</button>
 
-            {/* {showAddGroup && (
-                <div className="add-group-form">
-                    <input 
-                    type="text"
-                    value={newGroup}
-                    onChange={(e)=> setNewGroup(e.target.value)}
-                    placeholder="새 그룹 이름"
-                    />
-                    <button onClick={handleSaveNewGroup}>저장</button>
-                </div>
-            )} */}
+             {/* 그룹 모달 컴포넌트 */}
+            <GroupModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                onAddGroup={handleAddGroup}
+            />
         </div>
     );
 };

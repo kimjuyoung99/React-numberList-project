@@ -19,7 +19,7 @@ export default function InputCom({ setList, lists }) {
         }
         return '';
     };
-
+ 
     const validatePhone = (value) => {
         const phoneRegex = /^010-\d{4}-\d{4}$/;
         if (!phoneRegex.test(value)) {
@@ -58,9 +58,9 @@ export default function InputCom({ setList, lists }) {
                     onChange={(e) => setName(e.target.value)}
                     error={showErrors ? nameError : ''}
                 />
-                <InputEl 
+                <InputEl
                     label="전화번호" 
-                    placeholder="전화번호" 
+                    placeholde ㅠr="전화번호" 
                     value={phone} 
                     onChange={(e) => setPhone(e.target.value)}
                     error={showErrors ? phoneError : ''}
