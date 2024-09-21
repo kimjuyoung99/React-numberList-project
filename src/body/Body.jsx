@@ -7,7 +7,7 @@ export default function Body ({setList, lists}) {
     return (
         <div className="phone-book-container">
             <InputCom setList={setList}/>
-            <ListArea lists={lists}/>
+            <ListArea setList={setList} lists={lists} />
         </div>
     );
 };
