@@ -28,8 +28,11 @@
     margin-bottom: 15px;
     /* border : 1.5px solid blue; */
 }
+.searchHeader {
+    display: flex;
+}
 .numberInput {
-    width: 50%;
+    width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -58,6 +61,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    
 }
 .search-container {
     display: flex;
@@ -109,6 +113,7 @@
     justify-content: flex-start;
     gap: 10px;
     width: 100%;
+    justify-content: flex-end; 
 }
 
 .searchcom .searchButton,
@@ -150,13 +155,27 @@
         width: 560px;
         margin-bottom: 20px;
     }
+    .searchHeader {
+        display: flex;
+        gap : 50px;
+    }
     .searchcom {
         flex-wrap: wrap;
+        justify-content: flex-end; 
+        /* 오오.. 오른쪽으로 정렬.. */
     }
 
-    .searchcom .searchButton,
+    .searchcom .searchButton {
+        width: calc(20% - 1px);
+    }
     .searchcom .viewAllListButton {
-        width: calc(50% - 5px);
+        width: calc(50% - 1px);
+    }
+    .numberInput {
+        width: 100%;
+        padding: 7px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }
 
 }

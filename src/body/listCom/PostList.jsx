@@ -42,6 +42,7 @@ export default function PostList ({setList, lists}) {
 
     return (
         <div className="postlist">
+            <div className="searchHeader">
             <input 
             className="numberInput"
             value={inputText}
@@ -53,6 +54,7 @@ export default function PostList ({setList, lists}) {
             <SearchCom 
                 handleSearch={handleSearch} setFilteredLists={setFilteredLists} lists={lists}
             />
+            </div>
             <List lists={filteredLists} />
         </div>
     );
