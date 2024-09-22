@@ -1,5 +1,7 @@
 ### React로 전화번호부 만들기
-배포 링크 : https://kimjuyoung99.github.io/React-numberList-project/
+배포 링크 : https://kimjuyoung99.github.io/React-numberList-project/ 
+</br>
+
 **Git commit 메세지 규칙**
 | 타입 이름 | 내용 |
 |-----------|------|
