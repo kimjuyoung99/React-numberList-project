@@ -4,7 +4,7 @@ import InputEl from "./InputEl";
 import SaveBtn from "./SaveBtn";
 import SelectEl from "./selectEl";
 
-export default function InputCom({ setList, lists = [] }) {
+export default function InputCom({ setList, lists}) {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [group, setGroup] = useState('');
@@ -12,6 +12,7 @@ export default function InputCom({ setList, lists = [] }) {
     const [nameError, setNameError] = useState('');
     const [phoneError, setPhoneError] = useState('');
     const [showErrors, setShowErrors] = useState(false);
+    console.log("InputCom 컴포넌트에서 lists : ",lists);
 
     const validateName = (value) => {
         if (value.trim().length < 2) {
@@ -65,6 +66,7 @@ export default function InputCom({ setList, lists = [] }) {
                     label="이름" 
                     placeholder="이름" 
                     value={name} 
+                    lists={lists}
                     onChange={(e) => {
                         const newName = e.target.value;
                         setName(newName);
@@ -78,18 +80,21 @@ export default function InputCom({ setList, lists = [] }) {
                     label="전화번호" 
                     placeholder="전화번호" 
                     value={phone} 
+                    lists={lists}
                     onChange={(e) => setPhone(e.target.value)}
                     error={showErrors ? phoneError : ''}
                 />
                 <InputEl 
                     label="간단한 기록" 
                     placeholder="간단한 기록" 
+                    lists={lists}
                     value={note} 
                     onChange={(e) => setNote(e.target.value)}
                 />
                 <SelectEl 
                     label="그룹" 
                     onChange={(e) => setGroup(e.target.value)}
+                    lists={lists}
                 />
             </div>
             <SaveBtn onClick={handleSave} />

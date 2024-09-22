@@ -2,11 +2,12 @@ import "../../body/body.css";
 import { useState,useEffect } from "react";
 import GroupModal from "../../groupModal/GroupModal";
 
-export default function SelectEl ({label, value, onChange}) {
+
+export default function SelectEl ({label, value, onChange, lists}) {
     //모달 표시 여부와 그룹 목록 상태 초기화'
     const [showModal, setShowModal] = useState(false);
     const [groups, setGroups] = useState(['가족','직장','친구','스터디']);
-
+    console.log("SelectEl 컴포에서 list : ",lists)
     useEffect (()=> {
         const savedGroups = localStorage.getItem('groups');
         if(savedGroups) {
@@ -33,11 +34,12 @@ export default function SelectEl ({label, value, onChange}) {
             {/* 그룹 추가 버튼 */}
             <button onClick={()=> setShowModal(true)} className="add-group-btn">조직 추가</button>
 
-             {/* 그룹 모달 컴포넌트 */}
+             {/* /* 그룹 모달 컴포넌트 */}
             <GroupModal
                 isOpen={showModal}
                 onClose={() => setShowModal(false)}
                 onAddGroup={handleAddGroup}
+                lists={lists}
             />
         </div>
     );
