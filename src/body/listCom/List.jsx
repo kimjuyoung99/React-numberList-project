@@ -10,8 +10,10 @@ export default function List ({lists}) {
             {lists.map((item, index)=>(
                 <div key={index} className="list-item">
                 {item.name} - {item.phone} ({item.group})
+                <div className="list-item2">
                 <button className="details-btn">세부사항</button>
                 <button className="delete-btn">삭제</button>
+                </div>
             </div>                
             ))}
         </div>

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 1200px;
+    width: 1100px;
 }
 .InputCom {
     border: 1.5px solid gray ;
@@ -79,6 +79,11 @@
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
+.list-item2 {
+    display: flex;
+    justify-content: end;
+    gap:10px;
+}
 .list-num {
     margin-top: 18px;
     width: 300px;
@@ -100,12 +105,14 @@
 .details-btn {
     width: 120px;
     height: 40px;
-    margin : 15px 5px 0 0;
+    margin : 10px 1px 0 0;
+    justify-content: end;
 }
 .delete-btn {
     width: 80px;
     height: 40px;
-    margin : 15px 5px 0 0;
+    margin : 10px 5px 0 0;
+    justify-content: end;
 }
 
 .searchcom {
@@ -143,6 +150,9 @@
 .searchcom .searchButton:hover,
 .searchcom .viewAllListButton:hover {
     background-color: rgb(0, 98, 204);
+}
+.add-group-btn {
+    justify-self: end;
 }
 
 
